@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-links p {
+    margin: 0 10px;
+}
+
+.header-logo {
+    display: flex;
+}
+
+.header-logo p {
+    margin: 0 10px;
+}
