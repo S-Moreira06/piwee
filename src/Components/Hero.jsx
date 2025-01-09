@@ -1,7 +1,7 @@
 function Hero () {
     return (
         <>
-            <img src="/img/hero.jpg" alt="" />
+            <img src="/img/hero.jpg" alt="" className="hero-img"/>
         </>
     )
 }

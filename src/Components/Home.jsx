@@ -1,5 +1,6 @@
 import Hero from './Hero.jsx';
 import { useState,useEffect } from 'react';
+import '../assets/home.css';
 
 function Home () {
     const [data, setData] = useState([]);
@@ -12,14 +13,19 @@ function Home () {
                 .catch((error) => console.error('Erreur :', error));
         }, []);
         const products = data.map((product) =>
-            <li key={product.id}>{product.name}</li>
+            <li key={product.id}>
+                <a href="">
+                    <p>{product.name}</p>
+                    <img src={`/img/${product.image}`} alt={product.name} className='caroussel-item-img'/>
+                    <p>{product.price}</p>
+                </a>
+            </li>
     );
     return (
         <>
             <div>
                 <Hero/>
-                <img src="/img/2BZYfYkT5Zf0RrR4JmfY4.jpg" alt="" />
-                <ul>{products}</ul>
+                <ul className='caroussel'>{products}</ul>
             </div>
         </>
     )

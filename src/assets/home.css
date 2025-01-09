@@ -1,0 +1,13 @@
+.hero-img {
+    max-width: 100%;
+    overflow: hidden;
+}
+.caroussel {
+    display: flex;
+    overflow: scroll;
+    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+}
+
+.caroussel-item-img {
+    width: 350px;
+}
