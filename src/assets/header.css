@@ -1,6 +1,8 @@
 header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 .header-links {
@@ -12,10 +14,12 @@ header {
     margin: 0 10px;
 }
 
-.header-logo {
+.header-icons {
     display: flex;
 }
 
-.header-logo p {
+.header-icon {
     margin: 0 10px;
+    align-items: center;
+    width: 60px;
 }

@@ -1,10 +1,12 @@
-import Connexion from './Components/Connexion.jsx';
-import Header from './Components/Header.jsx';
+import Layout from './Components/Layout.jsx';
 import Home from './Components/Home.jsx';
-import Footer from './Components/Footer.jsx';
-import Logged from './Components/Logged.jsx';
+import Cart from './Components/Cart.jsx';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router';
 import { useState,useEffect } from 'react';
 import './App.css';
+
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -18,9 +20,19 @@ function App() {
     }, []);                                                                                                                                                               
   return (
     <>
-      <Header/>
-      <Home/>
-      <Footer/>
+    <BrowserRouter>
+      
+        {/* Routes pour la navigation */}
+        <Routes>
+          <Route path="/" element={<Layout />}> {/*Layout n'est pas une balise orpheline: il permet ici deglober des routes dans des routes , et ainsi de creer un contenu qui va s'afficher peut importe la page afficher, tres utile pour le header et le footer*/}
+            <Route path="/" element={<Home />} />
+            <Route path='/cart' element={<Cart />}></Route>
+            
+          </Route>
+        </Routes>
+
+        
+    </BrowserRouter>
     </>
   )
 }
