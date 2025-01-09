@@ -17,7 +17,7 @@ function Home () {
                 <a href="">
                     <p>{product.name}</p>
                     <img src={`/img/${product.image}`} alt={product.name} className='caroussel-item-img'/>
-                    <p>{product.price}</p>
+                    <p>{product.price/100} €</p>
                 </a>
             </li>
     );
