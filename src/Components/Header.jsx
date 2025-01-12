@@ -30,7 +30,7 @@ function Header() {
             </div>
             <div className={navActif == true ? "navList active" : "navList"}>
                 <ul>
-                    <li><a href="">Connexion</a></li>
+                    <li><Link to="/login">Connexion</Link></li>
                     <li><Link to="/cart">Panier</Link></li>
                 </ul>
             </div>

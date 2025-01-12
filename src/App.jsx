@@ -1,6 +1,7 @@
 import Layout from './Components/Layout.jsx';
 import Home from './Components/Home.jsx';
 import Cart from './Components/Cart.jsx';
+import Connexion from './Components/Connexion.jsx';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { useState,useEffect } from 'react';
@@ -26,7 +27,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}> {/*Layout n'est pas une balise orpheline: il permet ici deglober des routes dans des routes , et ainsi de creer un contenu qui va s'afficher peut importe la page afficher, tres utile pour le header et le footer*/}
             <Route path="/" element={<Home />} />
-            <Route path='/cart' element={<Cart />}></Route>
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/login' element={<Connexion />} />
             
           </Route>
         </Routes>
